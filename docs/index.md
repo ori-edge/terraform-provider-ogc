@@ -31,4 +31,3 @@ provider "ogc" {
 ### Optional
 
 - `access_token` (String, Sensitive) Access token used to interact with Ori Global Cloud. Can be provided via OGC_ACCESS_TOKEN environment variable.
-- `env` (String) Environment, defaults to `prod`.

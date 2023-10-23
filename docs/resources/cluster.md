@@ -68,9 +68,9 @@ Optional:
 - `client_certificate` (String) PEM-encoded client certificate for TLS authentication.
 - `client_key` (String) PEM-encoded client certificate key for TLS authentication.
 - `cluster_ca_certificate` (String) PEM-encoded root certificates bundle for TLS authentication.
-- `config_context` (String)
-- `config_context_auth_info` (String)
-- `config_context_cluster` (String)
+- `config_context` (String) Context to choose from the config file.
+- `config_context_auth_info` (String) Authentication info context of the kube config (name of the kubeconfig user, --user flag in kubectl).
+- `config_context_cluster` (String) Cluster context of the kube config (name of the kubeconfig cluster, --cluster flag in kubectl).
 - `config_path` (String) Path to the cluster kube config
 - `exec` (Block, Optional) (see [below for nested schema](#nestedblock--kubernetes_config--exec))
 - `host` (String) The hostname (in form of URI) of Kubernetes master.
