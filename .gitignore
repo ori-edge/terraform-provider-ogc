@@ -1,0 +1,9 @@
+# Binaries for programs and plugins
+.idea/
+artifacts/
+bin/
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
