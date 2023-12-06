@@ -48,10 +48,10 @@ resource "ogc_route_policy" "internet" {
 
 ### Optional
 
-- `application_id` (String) Id of source application. Either application_id or traffic_source_id must be set.
-- `port_id` (String) Id of target port. Either port_id or remote_endpoint_id must be set.
-- `remote_endpoint_id` (String) Id of target remote endpoint. Either port_id or remote_endpoint_id must be set.
-- `traffic_source_id` (String) Id of external route policy. Either application_id or traffic_source_id must be set.
+- `application_id` (String) ID of source application. Either application_id or traffic_source_id must be set.
+- `port_id` (String) ID of target port. Either port_id or remote_endpoint_id must be set.
+- `remote_endpoint_id` (String) ID of target remote endpoint. Either port_id or remote_endpoint_id must be set.
+- `traffic_source_id` (String) ID of external route policy. Either application_id or traffic_source_id must be set.
 
 ### Read-Only
 

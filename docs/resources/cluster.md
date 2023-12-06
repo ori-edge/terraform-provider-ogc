@@ -46,6 +46,7 @@ resource "kind_cluster" "default" {
 ### Optional
 
 - `description` (String) The user-supplied description for the Cluster.
+- `environments` (List of String) Environments associated with this cluster.
 - `kubernetes_config` (Block, Optional) Kubernetes configuration of the underlying cluster. (see [below for nested schema](#nestedblock--kubernetes_config))
 - `labels` (Map of String) Labels used by the deployment planning algorithm to place workloads in the appropriate clusters.
 - `name` (String) The user-supplied RFC 1123-compliant name of the Cluster.
