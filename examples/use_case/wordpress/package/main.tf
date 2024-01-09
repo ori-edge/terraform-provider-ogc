@@ -25,8 +25,7 @@ resource ogc_application "fe" {
 
 resource ogc_container "fe" {
   name = "wordpress"
-  image_name = "docker.io/wordpress"
-  image_tag = "6.3-apache"
+  image = "docker.io/wordpress:6.3-apache"
   application_id = ogc_application.fe.id
 
   env {
@@ -77,8 +76,7 @@ resource ogc_application "db" {
 
 resource ogc_container "db" {
   name = "database"
-  image_name = "docker.io/mysql"
-  image_tag = "8.0"
+  image = "docker.io/mysql:8.0"
   application_id = ogc_application.db.id
 
   env {
