@@ -19,7 +19,6 @@ resource "ogc_project" "proj" {
 
 resource "ogc_project_registry" reg {
   name       = "tf-reg2"
-  url        = "url.com"
   username   = "user"
   password   = "password"
   project_id = ogc_project.proj.id
@@ -34,7 +33,6 @@ resource "ogc_project_registry" reg {
 - `name` (String) The name of the private registry.
 - `password` (String, Sensitive) The password of the private registry.
 - `project_id` (String) The project id of the private registry.
-- `url` (String) The URL of the private registry.
 - `username` (String) The username of the private registry.
 
 ### Read-Only

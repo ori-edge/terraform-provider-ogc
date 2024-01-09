@@ -16,7 +16,7 @@ A Container entity encapsulates all the information required to run an OCI-compl
 resource "ogc_container" "container" {
   name = "example"
   application_id = ogc_application.app.id
-  image_name = "nginx"
+  image = "nginx"
   env {
     name = "PORT"
     value = "80"
@@ -30,7 +30,7 @@ resource "ogc_container" "container" {
 ### Required
 
 - `application_id` (String) The id of the parent Application of the Container.
-- `image_name` (String) The name of the OCI container image in the associated ImageRegistry.
+- `image` (String) The name of the OCI container image in the associated ImageRegistry.
 
 ### Optional
 
@@ -38,8 +38,7 @@ resource "ogc_container" "container" {
 - `command` (String) The command to execute in the Container.
 - `display_name` (String) The user-supplied name of the Container.
 - `env` (Block List) List of environment variables to set in the container as key/value pairs. (see [below for nested schema](#nestedblock--env))
-- `image_registry_id` (String) The id of the associated ImageRegistry of the Application.
-- `image_tag` (String) The tag of the OCI container image in the associated ImageRegistry.
+- `image_credentials_name` (String) Name of the BasicAuth credentials if image is not publicly accessible.
 - `name` (String) The user-supplied RFC 1123-compliant name of the Container.
 - `privileged_access` (Boolean) If true the container will be deployed in privileged access mode. Cannot be true if the owning Application's rejectPrivilegedClusters property is true or the owning Project's permitPrivilegedContainers property is false.
 
@@ -57,5 +56,5 @@ Required:
 
 Optional:
 
-- `secret_id` (String) Secret to be used as value for the environment variable.
+- `secret_name` (String) Secret to be used as value for the environment variable.
 - `value` (String) Value of the environment variable.

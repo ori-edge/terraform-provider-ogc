@@ -31,7 +31,7 @@ resource "ogc_container_mount" "mount" {
 ### Optional
 
 - `access_mode` (String) Required access mode to be applied for access to a Volume generated with a StorageRequest. Only applicable if the type is StorageRequest.
-- `secret_id` (String) Secret to be mounted.
+- `secret_name` (String) Secret to be mounted.
 - `storage_request_id` (String) Storage Request to be mounted.
 - `value` (String) Value to be mounted.
 
